@@ -17,9 +17,10 @@ public class HomePageService {
         User user1 = muRepository.findById(userId)
                 .orElseThrow(() -> new IllegalArgumentException("id정보가 다릅니다.")) ;
 
-        if(!"USER".equals(role)) {
-            throw new IllegalArgumentException("USERROLE이 USER가 아닙니다.");
-        }
+//        if(!"USER".equals(role)) {
+//            throw new IllegalArgumentException("USERROLE이 USER가 아닙니다.");
+//        }
+        // 이미 customFilter 에서 기능 구현함
 
         if ( !homePageRequest.getUserId().equals(user1.getId())) {
             throw new IllegalArgumentException("로그인 시 userId 정보가 일치하지 않습니다.");

@@ -1,3 +1,4 @@
+/*
 package com.example.demo.jwt;
 
 import jakarta.servlet.Filter;
@@ -24,4 +25,4 @@ public class WebConfig {
         return filterFilterRegistrationBean;
     }
 
-}
+}*/
