@@ -17,4 +17,8 @@ public class MuLoginResponseDto {
         this.token = token;
     }
 
+    @Override
+    public String toString() {
+        return "MuLoginResponseDto{" + "id=" + userId+ "token" + token;}
+
 }

@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.aop.TrackTime;
 import com.example.demo.jwt.TokenService;
 import com.example.demo.request.MuLoginRequestDto;
 import com.example.demo.request.MuRegisterRequestDto;
@@ -29,6 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
             return ResponseEntity.ok(muRegisterResponseDto);
         }
 
+        @TrackTime
         @PostMapping("/login")
         public ResponseEntity<MuLoginResponseDto> LoginController(@RequestBody MuLoginRequestDto muLoginRequestDto) {
             MuLoginResponseDto muLoginResponseDto = muService.muLoginService(muLoginRequestDto);
